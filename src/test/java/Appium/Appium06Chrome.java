@@ -18,10 +18,11 @@ public class Appium06Chrome {
 
         desiredCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
         desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
-        desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel_5");
+        desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Api_29");
         desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11.0");
         desiredCapabilities.setCapability(MobileCapabilityType.BROWSER_NAME,"chrome");
         desiredCapabilities.setCapability(MobileCapabilityType.NO_RESET, "true");
+        desiredCapabilities.setCapability("chromedriver-executable", "C:\\Users\\asus\\IdeaProjects\\AppiumTurkish\\src\\Drivers\\chromedriver.exe");
 
         AndroidDriver<AndroidElement> driver = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"), desiredCapabilities);
 

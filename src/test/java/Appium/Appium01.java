@@ -31,7 +31,7 @@ public class Appium01 {
 
         Thread.sleep(7000);
 
-       driver.unlockDevice();
+        System.out.println(driver.getSessionId());
 
     }
 }
