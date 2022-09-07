@@ -3,11 +3,13 @@ package Appium;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Set;
 
 public class Appium06Chrome {
 
@@ -28,5 +30,27 @@ public class Appium06Chrome {
 
         Thread.sleep(4000);
 
-}
+        Set contextName=driver.getContextHandles();
+
+        for (Object contextname:contextName
+             ) {
+
+            Thread.sleep(4000);
+
+            if(contextname.toString().contains("CHOROMIUM")){
+
+                driver.context((String)contextname);
+            }
+            
+        }
+
+        System.out.println(driver.getSessionId());
+
+        //inspect icin chrome://inspect/#devices
+
+        driver.get("https://www.amazon.com");
+
+        driver.findElementByXPath("//input[@type='text']").sendKeys("nutella"+ Keys.ENTER);
+
+    }
 }
