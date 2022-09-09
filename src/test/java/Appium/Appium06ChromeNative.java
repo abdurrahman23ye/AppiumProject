@@ -22,12 +22,14 @@ public class Appium06ChromeNative {
         desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
         desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Api_29");
         desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11.0");
-    //    desiredCapabilities.setCapability(MobileCapabilityType.BROWSER_NAME,"chrome"); native de kaldiriliyor
+        //    desiredCapabilities.setCapability(MobileCapabilityType.BROWSER_NAME,"chrome"); native de kaldiriliyor
         desiredCapabilities.setCapability(MobileCapabilityType.NO_RESET, "true");
-    //    desiredCapabilities.setCapability("chromedriverExecutable", "C:\\Users\\asus\\IdeaProjects\\AppiumTurkish\\src\\Drivers\\chromedriver.exe");
-        desiredCapabilities.setCapability("appPackage","com.android.chrome");
-        desiredCapabilities.setCapability("appActivity","com.google.android.apps.chrome.Main");
+        //    desiredCapabilities.setCapability("chromedriverExecutable", "C:\\Users\\asus\\IdeaProjects\\AppiumTurkish\\src\\Drivers\\chromedriver.exe");
+        desiredCapabilities.setCapability("appPackage", "com.android.chrome");
+        desiredCapabilities.setCapability("appActivity", "com.google.android.apps.chrome.Main");
 
+    }}
+        /*
         //app pakage ve app activity icin cmd de 1 adb devices
         //2 adb shell
         //dumpsys window | grep -E "mCurrentFocus"
@@ -56,7 +58,7 @@ public class Appium06ChromeNative {
             }
             
         }
-        */
+
 
         System.out.println(driver.getSessionId());
 
@@ -110,5 +112,11 @@ public class Appium06ChromeNative {
         //session kapat
 
 
+
+
+
     }
 }
+
+*/
+
