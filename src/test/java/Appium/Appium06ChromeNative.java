@@ -24,8 +24,8 @@ public class Appium06ChromeNative {
         desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11.0");
     //    desiredCapabilities.setCapability(MobileCapabilityType.BROWSER_NAME,"chrome"); native de kaldiriliyor
         desiredCapabilities.setCapability(MobileCapabilityType.NO_RESET, "true");
-        desiredCapabilities.setCapability("chromedriverExecutable", "C:\\Users\\asus\\IdeaProjects\\AppiumTurkish\\src\\Drivers\\chromedriver.exe");
-        desiredCapabilities.setCapability("appPackage","5e36aac u0 com.android.chrome");
+    //    desiredCapabilities.setCapability("chromedriverExecutable", "C:\\Users\\asus\\IdeaProjects\\AppiumTurkish\\src\\Drivers\\chromedriver.exe");
+        desiredCapabilities.setCapability("appPackage","com.android.chrome");
         desiredCapabilities.setCapability("appActivity","com.google.android.apps.chrome.Main");
 
         //app pakage ve app activity icin cmd de 1 adb devices
@@ -41,7 +41,7 @@ public class Appium06ChromeNative {
 
         Thread.sleep(4000);
 
-        Set contextName=driver.getContextHandles();
+    /*    Set contextName=driver.getContextHandles();
 
         System.out.println("contextName = " + contextName);
 
@@ -56,6 +56,7 @@ public class Appium06ChromeNative {
             }
             
         }
+        */
 
         System.out.println(driver.getSessionId());
 
@@ -63,7 +64,9 @@ public class Appium06ChromeNative {
 
         driver.get("https://www.amazon.com");
 
-        driver.findElementByXPath("//input[@type='text']").sendKeys("nutella"+ Keys.ENTER);
+        driver.findElementByAndroidUIAutomator()
+
+
 
     }
 }
